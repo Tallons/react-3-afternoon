@@ -1,41 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 
 import './App.css';
-
 import Header from './Header/Header';
-import Compose from './Compose/Compose';
+import PostSetup from "./Post/PostSetup"
 
-class App extends Component {
-  constructor() {
-    super();
 
-    this.state = {
-      posts: []
-    };
-
-    this.updatePost = this.updatePost.bind( this );
-    this.deletePost = this.deletePost.bind( this );
-    this.createPost = this.createPost.bind( this );
-  }
-  
-  componentDidMount() {
-
-  }
-
-  updatePost() {
-  
-  }
-
-  deletePost() {
-
-  }
-
-  createPost() {
-
-  }
-
-  render() {
-    const { posts } = this.state;
+function App() {
 
     return (
       <div className="App__parent">
@@ -43,12 +14,12 @@ class App extends Component {
 
         <section className="App__content">
 
-          <Compose />
-          
+          <PostSetup />
         </section>
       </div>
     );
   }
-}
+
 
 export default App;
+

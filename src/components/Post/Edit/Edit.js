@@ -20,7 +20,11 @@ export default class Edit extends Component {
   }
 
   updatePost() {
+const {text} = this.state;
+const{id, updatePostFn, hideEdit} = this.props;
 
+updatePostFn(id,text);
+hideEdit();
   }
 
   render() {
@@ -43,7 +47,7 @@ export default class Edit extends Component {
           </button>
 
           {/* This cancels the edit mode and does not save changes. Remember the "hideEdit" method was passed down through props */}
-          <button id="Edit__controsl-cancel"
+          <button id="Edit__controls-cancel"
                   className="Edit__control-btn"
                   onClick={ hideEdit }>
             Cancel
